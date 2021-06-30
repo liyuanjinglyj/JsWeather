@@ -1,0 +1,12 @@
+<div class="card_root_layout">
+    <image src="common/refresh.png" class="refresh_image" onclick="refresh"/>
+    <list class="weather_list">
+        <list-item for="{{weatherList}}" class="list_item">
+            <div class="list_div" onclick="routerEvent">
+                <text class="list_text">{{$item.wea_day}}</text>
+                <image class="list_image" src="{{$item.image}}"/>
+                <text class="list_text">{{$item.week}}</text>
+            </div>
+        </list-item>
+    </list>
+</div>

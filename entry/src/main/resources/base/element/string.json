@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "七日天气"
+    },
+    {
+      "name": "mainability_description",
+      "value": "JS_Empty Ability"
+    },
+    {
+      "name": "widget_widgetability_description",
+      "value": "This is a WidgetAbility"
+    },
+    {
+      "name": "entry_WidgetAbility",
+      "value": "7日天气"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "itemTitle": "Music",
+    "itemContent": "Singer",
+    "weatherList":""
+  },
+  "actions": {
+    "refresh": {
+      "action": "message",
+      "params": {
+        "mAction": "refresh"
+      }
+    },
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "com.liyuanjinglyj.jsweather",
+      "abilityName": "com.liyuanjinglyj.jsweather.MainAbility",
+      "params": {
+        "message": "router"
+      }
+    }
+  }
+}
+
