@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:margin="20vp"
+    ohos:orientation="vertical"
+    ohos:top_margin="100vp">
+
+
+    <TextField
+        ohos:id="$+id:ability_weather_choice_textfield"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:textfield_graphic"
+        ohos:hint="请输入城市名（去掉市，县，洲）"
+        ohos:margin="20vp"
+        ohos:padding="5vp"
+        ohos:text_alignment="vertical_center"
+        ohos:text_size="25vp"/>
+
+
+    <Button
+        ohos:id="$+id:ability_weather_choice_button"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:textfield_graphic"
+        ohos:bottom_padding="5vp"
+        ohos:text="获取城市天气同步到卡片"
+        ohos:text_color="#FF0000"
+        ohos:text_size="25vp"
+        ohos:top_padding="5vp"/>
+
+</DirectionalLayout>

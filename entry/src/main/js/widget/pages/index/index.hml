@@ -1,5 +1,8 @@
 <div class="card_root_layout">
-    <image src="common/refresh.png" class="refresh_image" onclick="refresh"/>
+    <div style="flex-direction: row;">
+        <image src="common/refresh.png" class="refresh_image" onclick="refresh"/>
+        <text style="font-size: 15px;margin-left: 10px;margin-top: 10px;">{{itemTitle}}</text>
+    </div>
     <list class="weather_list">
         <list-item for="{{weatherList}}" class="list_item">
             <div class="list_div" onclick="routerEvent">

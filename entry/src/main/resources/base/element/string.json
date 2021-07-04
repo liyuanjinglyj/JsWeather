@@ -15,6 +15,30 @@
     {
       "name": "entry_WidgetAbility",
       "value": "7日天气"
+    },
+    {
+      "name": "weatherchoiceability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "weatherchoiceability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_WeatherChoiceAbility",
+      "value": "entry_WeatherChoiceAbility"
+    },
+    {
+      "name": "weatherchoiceabilityslice_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "weatherchoiceabilityslice_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_WeatherChoiceAbilitySlice",
+      "value": "entry_WeatherChoiceAbilitySlice"
     }
   ]
 }

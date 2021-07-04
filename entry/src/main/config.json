@@ -70,6 +70,7 @@
           {
             "jsComponentName": "widget",
             "isDefault": true,
+            "formConfigAbility": "ability://com.liyuanjinglyj.jsweather.slice.WeatherChoiceAbility",
             "scheduledUpdateTime": "10:30",
             "defaultDimension": "2*4",
             "name": "widget",
@@ -84,6 +85,15 @@
           }
         ],
         "launchType": "singleton"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.liyuanjinglyj.jsweather.slice.WeatherChoiceAbility",
+        "icon": "$media:icon",
+        "description": "$string:entry_MainAbility",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
       }
     ],
     "js": [

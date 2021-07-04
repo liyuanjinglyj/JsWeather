@@ -23,7 +23,7 @@ public class WidgetImpl extends FormController {
     private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, WidgetImpl.class.getName());
     private final Context mContext;
     private String url="https://yiketianqi.com/api?version=v9&appid=73913812&appsecret=458XM5hq&city=";
-
+    private String city;
     public WidgetImpl(Context context, String formName, Integer dimension) {
         super(context, formName, dimension);
         mContext = context;
@@ -33,7 +33,7 @@ public class WidgetImpl extends FormController {
         LYJUtils http = new LYJUtils();
         String response = http.doGet(url+cityStr);
         ZSONObject res = ZSONObject.stringToZSON(response);
-        String city = res.getString("city");
+        city = res.getString("city");
         HiLog.info(TAG, city);
         ZSONArray data = res.getZSONArray("data");
         WeatherImageMap weatherImageMap=new WeatherImageMap();
@@ -41,12 +41,12 @@ public class WidgetImpl extends FormController {
         ZSONArray weatherList=new ZSONArray();
         for(int i=0;i<data.size();i++){
             ZSONObject zsonObject = (ZSONObject)data.get(i);
-            zsonObject.put("image",map.get(zsonObject.getString("wea_day")));
-            weatherList.add(zsonObject);
+            ZSONObject newObject=new ZSONObject();
+            newObject.put("image",map.get(zsonObject.getString("wea_day")));
+            newObject.put("wea_day",zsonObject.get("wea_day"));
+            newObject.put("week",zsonObject.get("week"));
+            weatherList.add(newObject);
         }
-        ZSONObject list_data = (ZSONObject)data.get(0);
-        String content=list_data.getString("date");
-        HiLog.info(TAG, content);
         return weatherList;
     }
 
@@ -56,6 +56,7 @@ public class WidgetImpl extends FormController {
         HiLog.info(TAG, "开始");
         ZSONObject object = new ZSONObject();
         object.put("weatherList", getData("北京"));
+        object.put("itemTitle", city);
         FormBindingData bindingData = new FormBindingData(object);
         ProviderFormInfo formInfo = new ProviderFormInfo();
         formInfo.setJsBindingData(bindingData);
